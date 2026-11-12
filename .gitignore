@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+cropped_faces/
+result_effects.jpg
+*.caffemodel
+*.prototxt
