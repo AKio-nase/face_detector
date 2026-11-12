@@ -51,6 +51,8 @@ python face_detector.py -i people.jpg --crop --json
 - 人脸检测走 Haar 级联（`haarcascade_frontalface_alt.xml`），侧脸、眼睛、微笑各用对应分类器。
 - 图宽超过 800px 时先缩小再检测，检测框再映射回原图，能省不少时间。
 - 检测框用 NMS 去重，IoU 阈值 0.3，见 `NMS_IOU_THRESHOLD`。
+- Haar 多尺度步长取 1.2（实测可在示例图上稳定检出；更细的步长更慢）。
+- `--json` 在零人脸时也会导出空 `faces` 数组，方便脚本统一处理。
 - 摄像头和视频模式算的是平滑 FPS（取最近 30 帧的平均）。
 - Linux 上检测不到 `DISPLAY` 时自动跳过窗口显示，适合丢服务器上跑。
 

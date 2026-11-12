@@ -35,7 +35,7 @@ _DNN_PROTO = "deploy.prototxt"
 _DNN_MODEL = "res10_300x300_ssd_iter_140000.caffemodel"
 
 # 检测参数
-SCALE_FACTOR = 1.3
+SCALE_FACTOR = 1.2
 MIN_NEIGHBORS = 5
 MIN_FACE_SIZE = (30, 30)
 DNN_CONFIDENCE = 0.7
@@ -476,7 +476,7 @@ def process_image(detector, input_path, output_path=None,
     print(f"[保存] {save_path}")
 
     # JSON导出
-    if export_json and faces:
+    if export_json:
         json_path = save_path.rsplit(".", 1)[0] + ".json"
         with open(json_path, "w", encoding="utf-8") as f:
             json.dump({"timestamp": datetime.now().isoformat(), "faces": faces},
