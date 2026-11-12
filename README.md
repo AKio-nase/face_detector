@@ -2,7 +2,7 @@
 
 用 OpenCV 写的人脸检测小工具，命令行运行，支持图片、摄像头和视频。单文件，没有界面依赖。
 
-> 本仓库仅用于个人作品展示；未经许可不得用于商业用途。示例图为合成示意图，不含真实人物。
+> 本仓库仅用于个人作品展示；未经许可不得用于商业用途。示例图来自 scikit-image 内置 `astronaut` 样例（NASA 公共领域人像），仅用于算法演示，非本人、非私有照片。
 
 ## 能力口径
 - 默认检测器：OpenCV 自带 Haar 级联，开箱即用。
@@ -64,4 +64,4 @@ python face_detector.py -i people.jpg --crop --json
 ## 文件
 
 - `face_detector.py`：主程序
-- `people.jpg`：示例图
+- `people.jpg`：示例图（NASA 公共领域人像，经 scikit-image 获取）
